@@ -21,18 +21,17 @@ jobs:
           rm -r .github
           ls
 
-      # - name: install-databricks-cli
-      #   uses: microsoft/install-databricks-cli@v1.0.0
+      - name: install-databricks-cli
+        uses: microsoft/install-databricks-cli@v1.0.0
       
-      # - name: databricks-import-directory
-      #   uses: microsoft/databricks-import-notebook@v1.0.0
-      #   with:
-      #     # Databricks host
-      #     databricks-host: https://adb-415647524744627.7.azuredatabricks.net/
-      #     # Databricks token
-      #     databricks-token: dapie6eb51610c937c82b88d0a49edb5ad64-3
-      #     # LOCAL_NOTEBOOKS_PATH
-      #     local-path: /home/runner/work/adb-cicd/adb-cicd
-      #     # REMOTE_NOTEBOOK_PATH
-      #     remote-path: /Workspace/Users/lknovember2022@gmail.com
-          
+      - name: databricks-import-directory
+        uses: microsoft/databricks-import-notebook@v1.0.0
+        with:
+          # Databricks host
+          databricks-host: https://adb-415647524744627.7.azuredatabricks.net/
+          # Databricks token
+          databricks-token: dapie6eb51610c937c82b88d0a49edb5ad64-3
+          # LOCAL_NOTEBOOKS_PATH
+          local-path: /home/runner/work/adb-cicd/adb-cicd
+          # REMOTE_NOTEBOOK_PATH
+          remote-path: /Workspace/Users/lknovember2022@gmail.com
