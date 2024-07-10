@@ -11,6 +11,7 @@ jobs:
   Deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    environment: TEST
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.1.5
@@ -30,7 +31,7 @@ jobs:
           # Databricks host
           databricks-host: https://adb-415647524744627.7.azuredatabricks.net/
           # Databricks token
-          databricks-token: dapie6eb51610c937c82b88d0a49edb5ad64-3
+          databricks-token: ${{ secrets.AZURE_DATABRICKS_ACCESS_TOKEN }}
           # LOCAL_NOTEBOOKS_PATH
           local-path: /home/runner/work/adb-cicd/adb-cicd
           # REMOTE_NOTEBOOK_PATH
