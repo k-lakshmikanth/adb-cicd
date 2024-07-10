@@ -20,7 +20,7 @@ jobs:
           rm -r .git
           rm -r .github
           ls
-
+ 
       - name: install-databricks-cli
         uses: microsoft/install-databricks-cli@v1.0.0
       
