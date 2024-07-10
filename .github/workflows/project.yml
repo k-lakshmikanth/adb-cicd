@@ -3,7 +3,10 @@ run-name: CICD Pipeline
 
 on:
   workflow_dispatch:
-
+  push:
+    branches:
+      - master
+      
 jobs:
   Deploy:
     name: Deploy
@@ -12,10 +15,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4.1.5
 
-      # - name: temp
-      #   run: |
-      #     ls
-      #     pwd
+      - name: temp
+        run: |
+          ls
 
       - name: install-databricks-cli
         uses: microsoft/install-databricks-cli@v1.0.0
