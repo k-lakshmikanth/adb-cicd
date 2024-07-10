@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.1.5
+        with:
+          sparse-checkout: .
 
       - name: temp
         run: |
