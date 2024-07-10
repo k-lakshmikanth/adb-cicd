@@ -16,7 +16,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4.1.5
 
-      - name: temp
+      - name: remove unnessary folders
         run: |
           rm -r .git
           rm -r .github
