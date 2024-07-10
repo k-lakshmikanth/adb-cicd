@@ -3,9 +3,6 @@ run-name: CICD Pipeline
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - master
 
 jobs:
   Deploy:
@@ -29,9 +26,9 @@ jobs:
           # Databricks host
           databricks-host: https://adb-415647524744627.7.azuredatabricks.net/
           # Databricks token
-          databricks-token: dapie6eb51610c937c82b88d0a49edb5ad64-3
+          # databricks-token: dapie6eb51610c937c82b88d0a49edb5ad64-3
           # LOCAL_NOTEBOOKS_PATH
-          local-path: /home/runner/work/adb-cicd/adb-cicd/Ingestion
+          local-path: /home/runner/work/adb-cicd/adb-cicd
           # REMOTE_NOTEBOOK_PATH
           remote-path: /Workspace/Users/lknovember2022@gmail.com
           
