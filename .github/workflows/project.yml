@@ -14,13 +14,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.1.5
-        with:
-          sparse-checkout: .
-          sparse-checkout-cone-mode: false
 
       - name: temp
         run: |
-          ls -a
+          rm -r .git
+          rm -r .github
+          ls
 
       # - name: install-databricks-cli
       #   uses: microsoft/install-databricks-cli@v1.0.0
